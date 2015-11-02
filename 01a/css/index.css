@@ -1,0 +1,745 @@
+@charset "utf-8";
+/*要素のフォントサイズやマージン・パディングをリセットしています*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+button,
+input,
+select,
+textarea,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-align: left;
+}
+/*行の高さをフォントサイズと同じにしています*/
+body {
+  line-height: 1.0;
+}
+/*文字サイズの自動調整を無効化しています*/
+body {
+  line-height: 1.0;
+  -webkit-text-size-adjust: none;
+}
+/*新規追加要素のデフォルトはすべてインライン要素になっているので、
+section要素などをブロック要素へ変更しています*/
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/*ホバー、アクティブ時のアウトラインを消しています*/
+a:hover,
+a:active {
+  outline: 0;
+}
+/*ol、ulのマーカー（行頭記号）を表示しないようにしています*/
+ol,
+ul {
+  list-style: none;
+}
+/*引用符の表示が出ないようにしています*/
+blockquote,
+q {
+  quotes: none;
+}
+/*blockquote要素、q要素の前後にコンテンツを追加しないように指定しています*/
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/*スタイリングを再指定しています*/
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+/*pre,code等のフォントを指定しています*/
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/*pre-formatted textの読みやすさを改善しています*/
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/*a要素のフォントサイズなどをリセットしフォントの縦方向の揃え位置を
+親要素のベースラインに揃えるようにしています*/
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/*ins要素のデフォルトをセットし、
+色を変える場合はここで変更できるようにしています*/
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/*mark要素のデフォルトをセットし、
+色やフォントスタイルを変える場合はここで変更できるようにしています
+また、mark要素とは、文書内の検索結果で該当するフレーズをハイライトして、
+目立たせる際に使用するようです*/
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/*テキストに打ち消し線が付くようにしています*/
+del {
+  text-decoration: line-through;
+}
+/*IEではデフォルトで点線を下線表示する設定ではないので、
+下線がつくようにしています
+また、マウスオーバー時にヘルプカーソルの表示が出るようにしています*/
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+/*隣接するセルのボーダーを重ねて表示し、間隔を0に指定しています*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+}
+/*テーブルの中身を天地中央にします*/
+th,
+td {
+  vertical-align: middle;
+}
+/*水平罫線のデフォルトである立体的な罫線を見えなくしています*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*フォームの入力項目をいい感じに配置します*/
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+  font-family: sans-serif;
+}
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input::placeholder {
+  color: #ccc;
+}
+input::-moz-placeholder {
+  color: #ccc;
+}
+input::-webkit-input-placeholder {
+  color: #ccc;
+}
+/*フォームの入力値が正常だった場合のスタイルです*/
+:valid {
+  background-color: green;
+}
+/*フォームの入力値が異常だった場合のスタイルです*/
+:invalid {
+  background-color: pink;
+}
+/*フォームの入力値が範囲内だった場合のスタイルです*/
+:in-range {
+  background-color: lightgreen;
+}
+/*フォームの入力値が範囲外だった場合のスタイルです*/
+:out-of-range {
+  background-color: red;
+}
+/*フォームへの入力が必須の場合のスタイルです*/
+:required {
+  border-style: solid;
+}
+/*フォームへの入力が必須でない場合のスタイルです*/
+:optional {
+  border-style: dashed;
+}
+/*縦方向の揃え位置を中央揃えに指定しています*/
+input,
+select {
+  vertical-align: middle;
+}
+/*テキストエリアのスクロールバーを削除し、上寄せにしています*/
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/*画像を縦に並べたときに隙間が空かないようにしています*/
+img {
+  vertical-align: bottom;
+  font-size: 0;
+  line-height: 0;
+  border: 0;
+}
+/* =clearfix
+------------------------------------------------- */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+/* =others
+------------------------------------------------- */
+.invisible {
+  visibility: hidden;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* =CSS3 properties
+------------------------------------------------- */
+/* =color
+------------------------------------------------- */
+/* =font
+------------------------------------------------- */
+/* =link & select
+------------------------------------------------- */
+a,
+a:link {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px dotted #000000;
+}
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: #999999;
+  border-bottom: 1px dotted #999999;
+}
+::-webkit-selection,
+::-moz-selection,
+::selection {
+  background: #7ecccb;
+  color: #fff;
+}
+/* =base
+------------------------------------------------- */
+body {
+  font-size: 62.5%;
+  font-family: "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+}
+p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+/* body
+------------------------------------------------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #fff;
+}
+/* container
+------------------------------------------------- */
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  background: #fff;
+}
+/* contents
+------------------------------------------------- */
+#contents {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* navibar
+------------------------------------------------- */
+#navibar {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.7);
+}
+#navibar #logoUnisonia {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+}
+#navibar #shareButton {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+}
+#navibar #shareButton li {
+  display: inline-block;
+  margin-right: 10px;
+  height: 22px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+#navibar #shareButton iframe.twitter-share-button {
+  width: 105px!important;
+}
+#navibar #shareButton .fb_edge_widget_with_comment span,
+#navibar #shareButton iframe.fb_ltr {
+  height: 20px!important;
+  width: 97px!important;
+}
+#navibar #shareButton .shareFacebook {
+  width: 115px;
+}
+/* mainContents
+------------------------------------------------- */
+#mainContents {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 150;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#mainContents #mainContentsWrapper {
+  overflow-y: scroll;
+}
+#mainContents section {
+  width: 770px;
+  margin-left: 75px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff;
+  color: #000;
+  letter-spacing: .1em;
+}
+#mainContents section h3 {
+  font-size: 180%;
+}
+#mainContents section h3 .headerSmall {
+  font-size: 60%;
+}
+/* header
+------------------------------------------------- */
+#globalheader {
+  padding-top: 50px;
+  margin-left: 75px;
+  width: 770px;
+}
+#globalheader h1 {
+  text-align: center;
+}
+#globalheader a {
+  border-bottom: none;
+}
+#globalheader a:hover {
+  border-bottom: none;
+}
+/* header
+------------------------------------------------- */
+#header {
+  padding-top: 30px;
+  margin-bottom: 130px;
+}
+#header #headerDescription {
+  text-align: center;
+  margin-bottom: 150px;
+}
+#header #headerDetail {
+  padding-bottom: 5px;
+  border-bottom: 2px dotted #333;
+}
+#header #headerDetail #headerDetailNumber {
+  float: left;
+  letter-spacing: 0;
+  font-size: 180%;
+}
+#header #headerDetail #headerDetailAbout {
+  float: right;
+  font-size: 160%;
+}
+#header h2 {
+  margin: 5px 0 0 -13px;
+}
+/* about
+------------------------------------------------- */
+#about {
+  margin-bottom: 130px;
+}
+#about h3 {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 2px dotted #333;
+  letter-spacing: .3em;
+}
+#about #aboutBox {
+  width: 370px;
+  float: left;
+}
+#about #aboutBox dl {
+  font-size: 140%;
+}
+#about #aboutBox dl dt {
+  clear: left;
+  float: left;
+  width: 110px;
+  line-height: 2.3;
+}
+#about #aboutBox dl dd {
+  line-height: 2.3;
+  margin-left: 110px;
+}
+#about #spaceBox {
+  width: 370px;
+  float: right;
+}
+#about #spaceBox dl {
+  font-size: 140%;
+}
+#about #spaceBox dl dt {
+  clear: left;
+  float: left;
+  width: 150px;
+  line-height: 2.3;
+}
+#about #spaceBox dl dd {
+  line-height: 2.3;
+  margin-left: 150px;
+}
+#about #spaceBox p {
+  line-height: 2.3;
+  font-size: 120%;
+}
+/* track
+------------------------------------------------- */
+#track {
+  margin-bottom: 130px;
+}
+#track h3 {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 2px dotted #333;
+  letter-spacing: .3em;
+}
+#track dl dt {
+  clear: left;
+  float: left;
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 140%;
+}
+#track dl .trackTitle {
+  float: left;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 300%;
+}
+#track dl .trackComposer {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  font-size: 180%;
+}
+#track dl .trackComposerCircle {
+  margin-left: 10px;
+  font-size: 60%;
+}
+/* credit
+------------------------------------------------- */
+#credit {
+  margin-bottom: 130px;
+}
+#credit h3 {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 2px dotted #333;
+  letter-spacing: .3em;
+}
+#credit dl {
+  font-size: 140%;
+  line-height: 2.3;
+}
+#credit dl dt {
+  clear: left;
+  float: left;
+  width: 210px;
+}
+#credit dl .name {
+  float: left;
+  width: 280px;
+}
+#credit dl .circle {
+  float: left;
+}
+/* pv
+------------------------------------------------- */
+#pv {
+  margin-bottom: 130px;
+}
+#pv h3 {
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  border-bottom: 2px dotted #333;
+  letter-spacing: .3em;
+}
+#pv ul li {
+  display: inline-block;
+  margin: 0 50px 25px 0;
+}
+/* banner
+------------------------------------------------- */
+#banner {
+  margin-bottom: 130px;
+}
+#banner h3 {
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: 2px dotted #333;
+  letter-spacing: .3em;
+}
+#banner a {
+  border-bottom: none;
+}
+#banner a:hover {
+  border-bottom: none;
+  opacity: 0.7;
+}
+#banner dl dt {
+  margin-bottom: 15px;
+}
+#banner dl dt img {
+  box-shadow: 0 0 5px #999;
+}
+#banner dl dd {
+  margin-bottom: 30px;
+}
+#banner dl dd input {
+  width: 446px;
+  padding: 8px 10px;
+  font-size: 120%;
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #999;
+}
+#banner #bannerBox {
+  position: relative;
+}
+#banner #bannerBox p#jacket {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#banner #bannerBox p#jacket img {
+  border: 7px solid #fff;
+  box-shadow: 0 0 5px #999;
+}
+/* globalfooter
+------------------------------------------------- */
+#globalfooter {
+  width: 770px;
+  margin-left: 75px;
+  padding: 50px 0 150px 0;
+  border-top: 2px dotted #333;
+}
+#globalfooter p {
+  text-align: center;
+  color: #000;
+  font-size: 110%;
+  font-weight: bold;
+}
+/* soundcloud
+------------------------------------------------- */
+#soundcloud {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  bottom: 0;
+  width: 100%;
+  height: 83px;
+  background: #ccc;
+}
+/* bg
+------------------------------------------------- */
+#bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#bgPhase1,
+#bgPhase2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: center center no-repeat;
+  background-size: cover;
+}
+#bgPhase1 {
+  z-index: 20;
+}
+#bgPhase2 {
+  z-index: 10;
+}
+/* fancybox
+------------------------------------------------- */
+.fancybox-wrap a,
+.fancybox-wrap a:hover {
+  border-bottom: none!important;
+}

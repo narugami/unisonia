@@ -1,0 +1,348 @@
+@charset "utf-8";
+@import "_reset.less";
+@import "_mixin.less";
+@import "_style.less";
+
+/* base
+------------------------------------------------- */
+html,
+body {
+	width:		100%;
+	min-width:	1024px;
+	height:		100%;
+	min-height:	768px;
+}
+body {
+	position:	relative;
+	color:		#fafafa;
+	background:	url(../img/bg.png) repeat;
+}
+#container {
+	display:	none;
+}
+
+/* header
+------------------------------------------------- */
+#globalheader {
+	position:	absolute;
+	width:		100%;
+	height:		60px;
+	top:		0;
+	left:		0;
+	z-index:	0;
+	h1 {
+		position:	absolute;
+		top:		15px;
+		left:		20px;
+	}
+	p {
+		position:	absolute;
+		right:		20px;
+		bottom:		5px;
+	}
+}
+	#share {
+		position:	absolute;
+		top:		10px;
+		right:		10px;
+		z-index:	5;
+		li { display: inline-block; }
+	}
+
+/* visual
+------------------------------------------------- */
+#visual {
+//display: none;
+	position:	absolute;
+	width:		100%;
+	height:		100%;
+	height:		calc(100% - 200px);
+	height:		-moz-calc(100% - 200px);
+	height:		-webkit-calc(100% - 200px);
+	top:		60px;
+	z-index:	1;
+	background-color:	#393939;
+	background-image:	url(../img/visual/mainvisual.jpg);
+	background-position:	left center;
+	background-size:	cover;
+	.box-shadow	(0,0,15px,#000);
+	cursor:		pointer;
+	h1 {
+		position:	absolute;
+		top:		50%;
+		left:		50%;
+		margin:		-220px 0 0 -379px;
+	}
+	#intro {
+		position:	absolute;
+		top:		50%;
+		left:		50%;
+		margin:		30px 0 0 -293px;
+	}
+	#description {
+		position:	absolute;
+		top:		0;
+		left:		10px;
+	}
+	nav {
+		position:		absolute;
+		bottom:			-5px;
+		left:			50%;
+		margin-left:	-38px;
+	}
+}
+
+/* information
+------------------------------------------------- */
+#information {
+	position:	absolute;
+	width:		100%;
+	height:		600px;
+	bottom:		0;
+}
+	#event {
+		position:	absolute;
+		bottom:		0;
+		left:		0;
+		z-index:	2;
+		height:		140px;
+		width:		100%;
+		#artwork {
+			position:	absolute;
+			left:		20px;
+			bottom:		15px;
+			.box-shadow	(0,0,10px,#000);
+		}
+		#wrap {
+			position:	absolute;
+			left:		180px;
+			top:		20px;
+			h1 {
+				position:	absolute;
+				top:		0;
+				left:		0;
+			}
+			#c84 {
+				position:	absolute;
+				top:		31px;
+				left:		0;
+			}
+			#backbones {
+				position:	absolute;
+				top:		53px;
+				left:		410px;
+			}
+			ul {
+				margin-top:	90px;
+				li {
+					display:	inline-block;
+					padding-right:	10px;
+					background:	url(../img/event/divide.png) no-repeat right center;
+				}
+				:last-child {
+					padding-right:	0;
+					background:	none;
+				}
+			}
+		}
+	}
+	#detail {
+		width:		100%;
+	}
+		#track {
+			height:		180px;
+			width:		100%;
+			background:	#fafafa;
+			.box-shadow	(0,0,10px,#000);
+			h2 {
+				position:	absolute;
+				top:		35px;
+				left:		20px;
+				width:		295px;
+				height:		13px;
+				color:		rgba(255,255,255,0);
+				background:	url(../img/detail/h2_track.png) no-repeat;
+			}
+			#tracklist1 {
+				position:	absolute;
+				top:		65px;
+				left:		20px;
+				width:		250px;
+				:nth-child(1) { background-image: url(../img/detail/track_01.png); }
+				:nth-child(2) { background-image: url(../img/detail/track_02.png); }
+				:nth-child(3) { background-image: url(../img/detail/track_03.png); }
+				:nth-child(4) { background-image: url(../img/detail/track_04.png); }
+				:nth-child(5) { background-image: url(../img/detail/track_05.png); }
+			}
+			#tracklist2 {
+				position:	absolute;
+				top:		65px;
+				left:		290px;
+				width:		280px;
+				:nth-child(1) { background-image: url(../img/detail/track_06.png); }
+				:nth-child(2) { background-image: url(../img/detail/track_07.png); }
+				:nth-child(3) { background-image: url(../img/detail/track_08.png); }
+				:nth-child(4) { background-image: url(../img/detail/track_09.png); }
+				:nth-child(5) { background-image: url(../img/detail/track_10.png); }
+			}
+			li {
+				height:		14px;
+				margin-bottom:	5px;
+				color:		rgba(255,255,255,0);
+				background-position:	left center;
+				background-repeat:	no-repeat;
+			}
+			#soundcloud {
+				.box-sizing		(border-box);
+				margin-top:		14px;
+				padding-left:	600px;
+			}
+		}
+		#detail1 {
+			position:	absolute;
+			top:		215px;
+			left:		20px;
+			width:		280px;
+			height:		183px;
+			border-right:	1px solid #B3B3B3;
+			ul>li {
+				margin-bottom:	20px;
+				h2 {
+					width:		45px;
+					float:		left;
+				}
+				li {
+					display:	inline-block;
+				}
+			}
+		}
+		#detail2 {
+			position:	absolute;
+			top:		215px;
+			left:		335px;
+			width:		355px;
+			height:		188px;
+			border-right:	1px solid #B3B3B3;
+			ul>li {
+				margin-bottom:	20px;
+				h2 {
+					width:		140px;
+					float:		left;
+				}
+				ul {
+					margin-left:	140px;
+					li {
+						margin-bottom:	6px;
+					}
+				}
+			}
+		}
+		#detail3 {
+			position:	absolute;
+			top:		215px;
+			left:		715px;
+			width:		290px;
+			height:		188px;
+			ul>li {
+				margin-bottom:	6px;
+				h2 {
+					width:		170px;
+					float:		left;
+				}
+				ul {
+					margin-left:	170px;
+					li {
+						margin-bottom:	3px;
+					}
+				}
+			}
+			#button {
+				margin:		30px 0 0 5px;
+				ul {
+					li {
+						display:	inline-block;
+						margin-right:	15px;
+						cursor:		pointer;
+						.box-shadow	(0,0,15px,#000);
+						&:last-child {
+							margin-right:	0;
+						}
+					}
+				}
+			}
+		}
+
+/* banner
+------------------------------------------------- */
+#banner {
+	display:	none;
+	position:	absolute;
+	top:		0;
+	left:		0;
+	width:		100%;
+	height:		100%;
+	z-index:	5;
+	#bannerBox {
+		position:	absolute;
+		top:		50%;
+		left:		50%;
+		margin:		-137px 0 0 -254px;
+		width:		508px;
+		height:		274px;
+		z-index:	6;
+		background:	#efefef;
+		.rounded	(6px);
+		.box-shadow	(0,0,10px,#000);
+		cursor:		default;
+		#bannerL {
+			position:	absolute;
+			top:		20px;
+			left:		20px;
+		}
+		#bannerLText {
+			position:	absolute;
+			top:		130px;
+			left:		20px;
+		}
+		#bannerS {
+			position:	absolute;
+			top:		180px;
+			left:		20px;
+		}
+		#bannerSText {
+			position:	absolute;
+			top:		230px;
+			left:		20px;
+		}
+		input {
+			height:		24px;
+			width:		468px;
+			padding:	0 5px;
+			font-size:	1.1rem;
+			.box-sizing	(border-box);
+			border:		1px solid #333;
+			.rounded	(3px);
+			background:	#fff;
+		}
+	}
+	#bannerMask {
+		position:	absolute;
+		top:		0;
+		left:		0;
+		width:		100%;
+		height:		100%;
+		z-index:	5;
+		background:	rgba(0,0,0,.5);
+		cursor:		pointer;
+	}
+}
+
+/* fancybox
+------------------------------------------------- */
+.fancybox-skin {
+	padding:	0!important;
+}
+
+
+
+
